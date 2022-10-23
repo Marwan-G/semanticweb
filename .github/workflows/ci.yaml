@@ -52,3 +52,18 @@ jobs:
       run: |
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:latest .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
+    - name: Update Kube config
+      run: aws eks update-kubeconfig --name demo region us-east-1
+
+    # - name: Deploy our app to Kubernetes in AWS EKS cluster
+    #   run: |
+    #      kubectl apply -f deployment.yaml
+
+    - uses: actions/checkout@v2
+    - name: Run kubectl
+      uses: nikosch86/github-action-eks-kubectl@main
+      # with:
+      #    command: "apply deployment.yaml"
+      # env:
+      #    EKS_CLUSTER: demo
+          
