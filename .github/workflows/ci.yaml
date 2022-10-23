@@ -34,7 +34,7 @@ jobs:
           ref: ${{ github.repository }}
     - run: npm install
     - run: npm test  > test_results.txt 2>&1
-    - run: npm build
+    - run: npm  run build
     - name: Results
       if: always()
       run: |
