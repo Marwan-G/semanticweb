@@ -62,8 +62,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run kubectl
       uses: nikosch86/github-action-eks-kubectl@main
-      # with:
-      #    command: "apply deployment.yaml"
-      # env:
-      #    EKS_CLUSTER: demo
+      with:
+         command: "apply deployment.yaml"
+      env:
+         EKS_CLUSTER: demo
           
