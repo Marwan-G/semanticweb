@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: 730785221004.dkr.ecr.us-east-1.amazonaws.com/ontology:latest
+        image: 730785221004.dkr.ecr.us-east-1.amazonaws.com/ontology:v1
         ports:
         - containerPort: 80
         imagePullPolicy: Always  
