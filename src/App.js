@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1> The PhD research in the University of Malga</h1>
+        <h1> The PhD research in the University of Malga today</h1>
         <p>
            This is a Demo App Deployed on Kubernetes on AWS, This app is running inside a container in a Pod.
         </p>
