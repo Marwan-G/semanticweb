@@ -21,6 +21,7 @@ spec:
         image: 730785221004.dkr.ecr.us-east-1.amazonaws.com/ontology:latest
         ports:
         - containerPort: 80
+        imagePullPolicy: Always  
 ---
 apiVersion: v1
 kind: Service
@@ -33,4 +34,4 @@ spec:
   ports:
     - protocol: TCP
       port: 6379
-      targetPort: 80        
+      targetPort: 80
